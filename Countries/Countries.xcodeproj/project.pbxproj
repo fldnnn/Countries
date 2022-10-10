@@ -23,7 +23,6 @@
 		310749B828F1FD8E00073814 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310749B628F1FD8E00073814 /* HomeTableViewCell.xib */; };
 		310749BA28F1FEBE00073814 /* ResponseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749B928F1FEBE00073814 /* ResponseClass.swift */; };
 		310749BC28F2007000073814 /* HomeTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749BB28F2007000073814 /* HomeTableViewHelper.swift */; };
-		310749BE28F2023F00073814 /* HomeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749BD28F2023F00073814 /* HomeTableViewAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		310749B628F1FD8E00073814 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		310749B928F1FEBE00073814 /* ResponseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseClass.swift; sourceTree = "<group>"; };
 		310749BB28F2007000073814 /* HomeTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHelper.swift; sourceTree = "<group>"; };
-		310749BD28F2023F00073814 /* HomeTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,6 @@
 				310749AD28F1FC7B00073814 /* HomeInteractor.swift */,
 				310749B928F1FEBE00073814 /* ResponseClass.swift */,
 				310749BB28F2007000073814 /* HomeTableViewHelper.swift */,
-				310749BD28F2023F00073814 /* HomeTableViewAdapter.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -191,7 +188,6 @@
 			files = (
 				310749AF28F1FC7B00073814 /* HomeContract.swift in Sources */,
 				310749B128F1FC7B00073814 /* HomeRouter.swift in Sources */,
-				310749BE28F2023F00073814 /* HomeTableViewAdapter.swift in Sources */,
 				3107499828F1FC1100073814 /* ViewController.swift in Sources */,
 				310749B328F1FC7B00073814 /* HomeInteractor.swift in Sources */,
 				3107499428F1FC1100073814 /* AppDelegate.swift in Sources */,
