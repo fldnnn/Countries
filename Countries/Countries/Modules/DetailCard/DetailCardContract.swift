@@ -10,6 +10,8 @@ import Foundation
 
 protocol DetailCardViewProtocol: AnyObject {
     var presenter: DetailCard.Presenter! { get set }
+    
+    func updateCountryDetail(_ model: DetailUI)
 }
 
 protocol DetailCardPresenterProtocol: AnyObject {
@@ -28,10 +30,12 @@ protocol DetailCardInteractorProtocol: AnyObject {
 }
 
 protocol DetailCardInteractorToPresenterProtocol: AnyObject {
+    func didDataFetch(_ countryDetail: CountryDetail)
 }
 
 protocol DetailCardRouterProtocol: AnyObject {
     var presenter: DetailCard.Presenter? { get set }
+
 }
 
 struct DetailCard {

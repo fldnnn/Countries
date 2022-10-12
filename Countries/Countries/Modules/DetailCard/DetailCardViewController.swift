@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailCardViewController: UIViewController {
 
+    @IBOutlet weak var countryCodeLabel: UILabel!
+    @IBOutlet weak var webView: WKWebView!
+    
     // MARK: - Properties
     var presenter: DetailCard.Presenter!
 
@@ -17,10 +21,14 @@ class DetailCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        print("here detail card")
+    }
+    @IBAction func informationButton(_ sender: Any) {
     }
 }
 
 extension DetailCardViewController: DetailCardViewProtocol {
-    // TODO: implement view output methods
+    func updateCountryDetail(_ model: DetailUI) {
+        countryCodeLabel.text = model.code
+        webView.load(model.flagImageUri!)
+    }
 }

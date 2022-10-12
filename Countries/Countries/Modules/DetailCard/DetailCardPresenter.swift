@@ -15,15 +15,27 @@ class DetailCardPresenter {
     var router: DetailCard.Router!
     var interactor: DetailCard.Interactor!
     var countryCode: String?
+    private var countryDetails: Detail?
 }
 
 extension DetailCardPresenter: DetailCardPresenterProtocol {
-    // TODO: implement presentation methods
+  
+   
+    
+    func viewDidLoad() {
+        interactor?.fetchDetailCountry(with: countryCode ?? "")
+    }
 }
 
 extension DetailCardPresenter: DetailCardInteractorToPresenterProtocol {
-    // TODO: implement interactor output methods
-    func viewDidLoad() {
-        interactor?.fetchDetailCountry(with: countryCode ?? "")
+    
+    func didDataFetch(_ countryDetail: CountryDetail) {
+        let url = URL(string:  countryDetail.data?.flagImageUri ?? "-")
+        let request = URLRequest(url: url!)
+        let items = countryDetail.data.map({
+            DetailUI.init(code: $0.code, flagImageUri: request, wikiDataId: $0.wikiDataId)
+        })
+        view?.updateCountryDetail(items!)
+        
     }
 }

@@ -8,14 +8,13 @@
 
 import Foundation
 
-class DetailCardInteractor {
+class DetailCardInteractor: DetailCardInteractorProtocol {
 
     // MARK: - Properties
     weak var output: DetailCard.InteractorToPresenter?
+    var presenter: DetailCard.Presenter?
+    var data: CountryDetail?
 
-}
-
-extension DetailCardInteractor: DetailCardInteractorProtocol {
     func fetchDetailCountry(with countryCode: String) {
         let headers = [
             "X-RapidAPI-Key": "3fff245794msh34a41605824e548p1a2d9bjsnb796d5ce1b80",
@@ -33,19 +32,11 @@ extension DetailCardInteractor: DetailCardInteractorProtocol {
             guard let data = data else { return }
             do {
                 let object = try JSONDecoder().decode(CountryDetail.self, from: data)
-
+            
+                self?.data = object
            
                 DispatchQueue.main.async {
-                    //self?.presenter?.didDataFetch()
-                    
-                    
-        //                    self.data.map({ Cell.init(nameCell: $0.name, countryCode: $0.code)
-        //                    })
-                    print(object.data)
-                    print(object.data?.flagImageUri)
-                    
-                    
-        //                    UserDefaults.standard.set( , forKey: <#T##String#>)
+                    self?.output?.didDataFetch(object)
                 }
             } catch {
                 print(error.localizedDescription)
@@ -54,6 +45,7 @@ extension DetailCardInteractor: DetailCardInteractorProtocol {
         task.resume()
     }
 }
+
 
 
 

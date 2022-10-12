@@ -64,6 +64,5 @@ extension HomeTableViewHelper: UITableViewDelegate, UITableViewDataSource {
         //rowItem.wikiDataId
         let countryCode = "\(rowItem.countryCode!)"
         presenter?.onHomeCellPressed(with: countryCode)
-        print(countryCode)
     }
 }

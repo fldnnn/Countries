@@ -30,10 +30,10 @@ class DetailCardRouter {
             presenter.countryCode = countryCode
 
             interactor.output = presenter
+//            interactor.presenter = presenter
 
             router.presenter = presenter
             router.vC = view
-            print("detail card router")
         
             return view
         }

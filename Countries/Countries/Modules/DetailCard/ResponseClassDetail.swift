@@ -21,3 +21,9 @@ struct Detail: Codable {
     let numRegions: Int?
     let wikiDataId: String?
 }
+
+struct DetailUI {
+    let code: String?
+    let flagImageUri: URLRequest?
+    let wikiDataId: String?
+}
