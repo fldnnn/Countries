@@ -42,4 +42,8 @@ class HomeRouter {
 
 extension HomeRouter: HomeRouterProtocol {
     // TODO: Implement wireframe methods
+    func navigateToDetailCard(with countryCode: String) {
+        let detailCardVC = DetailCardRouter.createModule(with: countryCode) ?? UIViewController()
+        vC?.navigationController?.pushViewController(detailCardVC, animated: true)
+    }
 }

@@ -11,7 +11,6 @@ struct CountryList: Codable {
     let data: [Country]?
     let links: [Link]?
     let metadata: Meta?
-    
 }
 
 struct Country: Codable {
@@ -33,4 +32,6 @@ struct Meta: Codable {
 
 struct Cell {
     let nameCell: String?
+    let countryCode: String?
+    let wikiDataId: String?
 }

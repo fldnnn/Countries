@@ -17,16 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="nBV-QN-Ynd">
-                        <rect key="frame" x="86" y="11" width="202.5" height="31.5"/>
+                        <rect key="frame" x="36.5" y="11" width="301" height="31.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvQ-P7-gtO">
-                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvQ-P7-gtO">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="IB4-Af-nvh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAn-RG-i8s">
-                                <rect key="frame" x="155.5" y="0.0" width="47" height="31.5"/>
+                                <rect key="frame" x="254" y="0.0" width="47" height="31.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
                                 <connections>

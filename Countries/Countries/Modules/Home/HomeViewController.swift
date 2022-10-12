@@ -22,12 +22,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        print("here1")
         presenter.viewDidLoad()
 
     }
     private func setupUI() {
-        tableViewHelper = .init(with: homeTableView, vc: self)
+        tableViewHelper = .init(with: homeTableView, vc: self, presenter: presenter)
     }
 }
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31002A7228F48C3B00CEA8D4 /* DetailCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31002A6C28F48C3B00CEA8D4 /* DetailCard.storyboard */; };
+		31002A7328F48C3B00CEA8D4 /* DetailCardContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002A6D28F48C3B00CEA8D4 /* DetailCardContract.swift */; };
+		31002A7428F48C3B00CEA8D4 /* DetailCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002A6E28F48C3B00CEA8D4 /* DetailCardPresenter.swift */; };
+		31002A7528F48C3B00CEA8D4 /* DetailCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002A6F28F48C3B00CEA8D4 /* DetailCardRouter.swift */; };
+		31002A7628F48C3B00CEA8D4 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002A7028F48C3B00CEA8D4 /* DetailCardViewController.swift */; };
+		31002A7728F48C3B00CEA8D4 /* DetailCardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31002A7128F48C3B00CEA8D4 /* DetailCardInteractor.swift */; };
 		3107499428F1FC1100073814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107499328F1FC1100073814 /* AppDelegate.swift */; };
 		3107499628F1FC1100073814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107499528F1FC1100073814 /* SceneDelegate.swift */; };
 		3107499828F1FC1100073814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107499728F1FC1100073814 /* ViewController.swift */; };
@@ -23,9 +29,16 @@
 		310749B828F1FD8E00073814 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 310749B628F1FD8E00073814 /* HomeTableViewCell.xib */; };
 		310749BA28F1FEBE00073814 /* ResponseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749B928F1FEBE00073814 /* ResponseClass.swift */; };
 		310749BC28F2007000073814 /* HomeTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749BB28F2007000073814 /* HomeTableViewHelper.swift */; };
+		31B4250A28F7452D00A92051 /* ResponseClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4250928F7452D00A92051 /* ResponseClassDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31002A6C28F48C3B00CEA8D4 /* DetailCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailCard.storyboard; sourceTree = "<group>"; };
+		31002A6D28F48C3B00CEA8D4 /* DetailCardContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardContract.swift; sourceTree = "<group>"; };
+		31002A6E28F48C3B00CEA8D4 /* DetailCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardPresenter.swift; sourceTree = "<group>"; };
+		31002A6F28F48C3B00CEA8D4 /* DetailCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardRouter.swift; sourceTree = "<group>"; };
+		31002A7028F48C3B00CEA8D4 /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
+		31002A7128F48C3B00CEA8D4 /* DetailCardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardInteractor.swift; sourceTree = "<group>"; };
 		3107499028F1FC1100073814 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3107499328F1FC1100073814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3107499528F1FC1100073814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +57,7 @@
 		310749B628F1FD8E00073814 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		310749B928F1FEBE00073814 /* ResponseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseClass.swift; sourceTree = "<group>"; };
 		310749BB28F2007000073814 /* HomeTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHelper.swift; sourceTree = "<group>"; };
+		31B4250928F7452D00A92051 /* ResponseClassDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseClassDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31002A6A28F48C1100CEA8D4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				310749B428F1FD6C00073814 /* Cell */,
+				310749A828F1FC7B00073814 /* Home.storyboard */,
+				310749A928F1FC7B00073814 /* HomeContract.swift */,
+				310749AA28F1FC7B00073814 /* HomePresenter.swift */,
+				310749AB28F1FC7B00073814 /* HomeRouter.swift */,
+				310749AC28F1FC7B00073814 /* HomeViewController.swift */,
+				310749AD28F1FC7B00073814 /* HomeInteractor.swift */,
+				310749BB28F2007000073814 /* HomeTableViewHelper.swift */,
+				310749B928F1FEBE00073814 /* ResponseClass.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		31002A6B28F48C2500CEA8D4 /* DetailCard */ = {
+			isa = PBXGroup;
+			children = (
+				31002A6C28F48C3B00CEA8D4 /* DetailCard.storyboard */,
+				31002A6D28F48C3B00CEA8D4 /* DetailCardContract.swift */,
+				31002A6E28F48C3B00CEA8D4 /* DetailCardPresenter.swift */,
+				31002A6F28F48C3B00CEA8D4 /* DetailCardRouter.swift */,
+				31002A7028F48C3B00CEA8D4 /* DetailCardViewController.swift */,
+				31002A7128F48C3B00CEA8D4 /* DetailCardInteractor.swift */,
+				31B4250928F7452D00A92051 /* ResponseClassDetail.swift */,
+			);
+			path = DetailCard;
+			sourceTree = "<group>";
+		};
 		3107498728F1FC1100073814 = {
 			isa = PBXGroup;
 			children = (
@@ -91,15 +135,8 @@
 		310749A728F1FC2500073814 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				310749B428F1FD6C00073814 /* Cell */,
-				310749A828F1FC7B00073814 /* Home.storyboard */,
-				310749A928F1FC7B00073814 /* HomeContract.swift */,
-				310749AA28F1FC7B00073814 /* HomePresenter.swift */,
-				310749AB28F1FC7B00073814 /* HomeRouter.swift */,
-				310749AC28F1FC7B00073814 /* HomeViewController.swift */,
-				310749AD28F1FC7B00073814 /* HomeInteractor.swift */,
-				310749B928F1FEBE00073814 /* ResponseClass.swift */,
-				310749BB28F2007000073814 /* HomeTableViewHelper.swift */,
+				31002A6B28F48C2500CEA8D4 /* DetailCard */,
+				31002A6A28F48C1100CEA8D4 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -174,6 +211,7 @@
 				310749A028F1FC1400073814 /* LaunchScreen.storyboard in Resources */,
 				3107499D28F1FC1400073814 /* Assets.xcassets in Resources */,
 				3107499B28F1FC1100073814 /* Main.storyboard in Resources */,
+				31002A7228F48C3B00CEA8D4 /* DetailCard.storyboard in Resources */,
 				310749B828F1FD8E00073814 /* HomeTableViewCell.xib in Resources */,
 				310749AE28F1FC7B00073814 /* Home.storyboard in Resources */,
 			);
@@ -188,15 +226,21 @@
 			files = (
 				310749AF28F1FC7B00073814 /* HomeContract.swift in Sources */,
 				310749B128F1FC7B00073814 /* HomeRouter.swift in Sources */,
+				31002A7328F48C3B00CEA8D4 /* DetailCardContract.swift in Sources */,
 				3107499828F1FC1100073814 /* ViewController.swift in Sources */,
 				310749B328F1FC7B00073814 /* HomeInteractor.swift in Sources */,
 				3107499428F1FC1100073814 /* AppDelegate.swift in Sources */,
+				31B4250A28F7452D00A92051 /* ResponseClassDetail.swift in Sources */,
 				310749B028F1FC7B00073814 /* HomePresenter.swift in Sources */,
 				310749B728F1FD8E00073814 /* HomeTableViewCell.swift in Sources */,
 				310749BA28F1FEBE00073814 /* ResponseClass.swift in Sources */,
+				31002A7428F48C3B00CEA8D4 /* DetailCardPresenter.swift in Sources */,
 				310749BC28F2007000073814 /* HomeTableViewHelper.swift in Sources */,
+				31002A7628F48C3B00CEA8D4 /* DetailCardViewController.swift in Sources */,
 				310749B228F1FC7B00073814 /* HomeViewController.swift in Sources */,
+				31002A7728F48C3B00CEA8D4 /* DetailCardInteractor.swift in Sources */,
 				3107499628F1FC1100073814 /* SceneDelegate.swift in Sources */,
+				31002A7528F48C3B00CEA8D4 /* DetailCardRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

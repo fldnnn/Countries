@@ -26,7 +26,7 @@ extension HomePresenter: HomePresenterProtocol {
         
         //let items = data.data
         
-        let items = data.data?.map({ Cell.init(nameCell: $0.name)
+        let items = data.data?.map({ Cell.init(nameCell: $0.name, countryCode: $0.code, wikiDataId: $0.wikiDataId)
         })
         print(items!)
         
@@ -35,7 +35,10 @@ extension HomePresenter: HomePresenterProtocol {
     
     func viewDidLoad() {
         interactor.fetchCountryList()
-        print("here2")
+    }
+    
+    func onHomeCellPressed(with countryCode: String) {
+        router?.navigateToDetailCard(with: countryCode)
     }
 }
 

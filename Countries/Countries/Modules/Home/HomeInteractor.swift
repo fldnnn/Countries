@@ -31,12 +31,12 @@ class HomeInteractor: Home.Interactor {
             do {
                 let object = try JSONDecoder().decode(CountryList.self, from: data)
                 self?.data = object
-
+           
                 DispatchQueue.main.async {
                     self?.presenter?.didDataFetch()
                 }
             } catch {
-                print(error)
+                print(error.localizedDescription)
             }
         
         }

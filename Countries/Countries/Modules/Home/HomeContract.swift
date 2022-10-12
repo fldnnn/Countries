@@ -21,6 +21,7 @@ protocol HomePresenterProtocol: AnyObject {
     
     func viewDidLoad()
     func didDataFetch()
+    func onHomeCellPressed(with countryCode: String)
     
 }
 
@@ -38,6 +39,8 @@ protocol HomeInteractorToPresenterProtocol: AnyObject {
 
 protocol HomeRouterProtocol: AnyObject {
     var presenter: Home.Presenter? { get set }
+    
+    func navigateToDetailCard(with countryCode: String)
 }
 
 struct Home {

@@ -5,18 +5,19 @@
 //  Created by Fulden Onan on 8.10.2022.
 //
 
-import Foundation
 import UIKit
 
 class HomeTableViewHelper: NSObject {
     weak var viewController: UIViewController?
     weak var homeTableView: UITableView?
     
+    private var presenter: Home.Presenter!
+    
     private var list: [Cell] = []
     
-    init(with homeTableView: UITableView?, vc: UIViewController?) {
+    init(with homeTableView: UITableView?, vc: UIViewController?, presenter: Home.Presenter!) {
         super.init()
-        
+        self.presenter = presenter
         self.homeTableView = homeTableView
         self.viewController = vc
         
@@ -45,7 +46,7 @@ extension HomeTableViewHelper: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
         
         let rowItem = list[indexPath.row]
-        cell.countryNameLabel.text = rowItem.nameCell
+        cell.countryNameLabel.text = rowItem.nameCell   
 
         return cell
     }
@@ -55,10 +56,14 @@ extension HomeTableViewHelper: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        10
+        15
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let rowItem = list[indexPath.row]
+        //rowItem.wikiDataId
+        let countryCode = "\(rowItem.countryCode!)"
+        presenter?.onHomeCellPressed(with: countryCode)
+        print(countryCode)
     }
 }
