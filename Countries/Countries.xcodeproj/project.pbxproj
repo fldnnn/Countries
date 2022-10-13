@@ -30,6 +30,12 @@
 		310749BA28F1FEBE00073814 /* ResponseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749B928F1FEBE00073814 /* ResponseClass.swift */; };
 		310749BC28F2007000073814 /* HomeTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310749BB28F2007000073814 /* HomeTableViewHelper.swift */; };
 		31B4250A28F7452D00A92051 /* ResponseClassDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4250928F7452D00A92051 /* ResponseClassDetail.swift */; };
+		31B4251228F78FB800A92051 /* InformationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B4250C28F78FB800A92051 /* InformationView.storyboard */; };
+		31B4251328F78FB800A92051 /* InformationViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4250D28F78FB800A92051 /* InformationViewContract.swift */; };
+		31B4251428F78FB800A92051 /* InformationViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4250E28F78FB800A92051 /* InformationViewPresenter.swift */; };
+		31B4251528F78FB800A92051 /* InformationViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4250F28F78FB800A92051 /* InformationViewRouter.swift */; };
+		31B4251628F78FB800A92051 /* InformationViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4251028F78FB800A92051 /* InformationViewViewController.swift */; };
+		31B4251728F78FB800A92051 /* InformationViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B4251128F78FB800A92051 /* InformationViewInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		310749B928F1FEBE00073814 /* ResponseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseClass.swift; sourceTree = "<group>"; };
 		310749BB28F2007000073814 /* HomeTableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewHelper.swift; sourceTree = "<group>"; };
 		31B4250928F7452D00A92051 /* ResponseClassDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseClassDetail.swift; sourceTree = "<group>"; };
+		31B4250C28F78FB800A92051 /* InformationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationView.storyboard; sourceTree = "<group>"; };
+		31B4250D28F78FB800A92051 /* InformationViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewContract.swift; sourceTree = "<group>"; };
+		31B4250E28F78FB800A92051 /* InformationViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewPresenter.swift; sourceTree = "<group>"; };
+		31B4250F28F78FB800A92051 /* InformationViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewRouter.swift; sourceTree = "<group>"; };
+		31B4251028F78FB800A92051 /* InformationViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewViewController.swift; sourceTree = "<group>"; };
+		31B4251128F78FB800A92051 /* InformationViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 		310749A728F1FC2500073814 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				31B4250B28F78FA600A92051 /* InformationView */,
 				31002A6B28F48C2500CEA8D4 /* DetailCard */,
 				31002A6A28F48C1100CEA8D4 /* Home */,
 			);
@@ -148,6 +161,19 @@
 				310749B628F1FD8E00073814 /* HomeTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		31B4250B28F78FA600A92051 /* InformationView */ = {
+			isa = PBXGroup;
+			children = (
+				31B4250C28F78FB800A92051 /* InformationView.storyboard */,
+				31B4250D28F78FB800A92051 /* InformationViewContract.swift */,
+				31B4250E28F78FB800A92051 /* InformationViewPresenter.swift */,
+				31B4250F28F78FB800A92051 /* InformationViewRouter.swift */,
+				31B4251028F78FB800A92051 /* InformationViewViewController.swift */,
+				31B4251128F78FB800A92051 /* InformationViewInteractor.swift */,
+			);
+			path = InformationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +239,7 @@
 				3107499B28F1FC1100073814 /* Main.storyboard in Resources */,
 				31002A7228F48C3B00CEA8D4 /* DetailCard.storyboard in Resources */,
 				310749B828F1FD8E00073814 /* HomeTableViewCell.xib in Resources */,
+				31B4251228F78FB800A92051 /* InformationView.storyboard in Resources */,
 				310749AE28F1FC7B00073814 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B4251528F78FB800A92051 /* InformationViewRouter.swift in Sources */,
 				310749AF28F1FC7B00073814 /* HomeContract.swift in Sources */,
 				310749B128F1FC7B00073814 /* HomeRouter.swift in Sources */,
 				31002A7328F48C3B00CEA8D4 /* DetailCardContract.swift in Sources */,
+				31B4251728F78FB800A92051 /* InformationViewInteractor.swift in Sources */,
+				31B4251328F78FB800A92051 /* InformationViewContract.swift in Sources */,
 				3107499828F1FC1100073814 /* ViewController.swift in Sources */,
+				31B4251428F78FB800A92051 /* InformationViewPresenter.swift in Sources */,
+				31B4251628F78FB800A92051 /* InformationViewViewController.swift in Sources */,
 				310749B328F1FC7B00073814 /* HomeInteractor.swift in Sources */,
 				3107499428F1FC1100073814 /* AppDelegate.swift in Sources */,
 				31B4250A28F7452D00A92051 /* ResponseClassDetail.swift in Sources */,

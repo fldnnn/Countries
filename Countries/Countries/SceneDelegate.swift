@@ -19,7 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         let viewController = HomeRouter.createModule()
         let navigationController = UINavigationController(rootViewController: viewController ?? UIViewController())
-        window?.rootViewController = navigationController
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [navigationController]
+        navigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "homekit"), tag: 8)
+
+        
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
       
     }

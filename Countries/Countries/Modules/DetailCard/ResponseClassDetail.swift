@@ -26,4 +26,5 @@ struct DetailUI {
     let code: String?
     let flagImageUri: URLRequest?
     let wikiDataId: String?
+    let name: String?
 }

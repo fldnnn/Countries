@@ -43,4 +43,9 @@ class DetailCardRouter {
 
 extension DetailCardRouter: DetailCardRouterProtocol {
     // TODO: Implement wireframe methods
+    func navigateToInfoView(with wikiId: String) {
+        let detailCardVC = InformationViewRouter.createModule(with: wikiId) ?? UIViewController()
+        vC?.navigationController?.pushViewController(detailCardVC, animated: true)
+        print(wikiId)
+    }
 }

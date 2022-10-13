@@ -20,6 +20,7 @@ protocol DetailCardPresenterProtocol: AnyObject {
     var router: DetailCard.Router! { get set }
     
     func viewDidLoad()
+    func infoButtonPressed(with wikiId: String)
     
 }
 
@@ -35,6 +36,8 @@ protocol DetailCardInteractorToPresenterProtocol: AnyObject {
 
 protocol DetailCardRouterProtocol: AnyObject {
     var presenter: DetailCard.Presenter? { get set }
+    
+    func navigateToInfoView(with wikiId: String)
 
 }
 

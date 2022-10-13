@@ -61,7 +61,6 @@ extension HomeTableViewHelper: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowItem = list[indexPath.row]
-        //rowItem.wikiDataId
         let countryCode = "\(rowItem.countryCode!)"
         presenter?.onHomeCellPressed(with: countryCode)
     }

@@ -20,10 +20,12 @@ class DetailCardPresenter {
 
 extension DetailCardPresenter: DetailCardPresenterProtocol {
   
-   
-    
     func viewDidLoad() {
         interactor?.fetchDetailCountry(with: countryCode ?? "")
+    }
+    
+    func infoButtonPressed(with wikiId: String) {
+        router.navigateToInfoView(with: wikiId)
     }
 }
 
@@ -33,9 +35,8 @@ extension DetailCardPresenter: DetailCardInteractorToPresenterProtocol {
         let url = URL(string:  countryDetail.data?.flagImageUri ?? "-")
         let request = URLRequest(url: url!)
         let items = countryDetail.data.map({
-            DetailUI.init(code: $0.code, flagImageUri: request, wikiDataId: $0.wikiDataId)
+            DetailUI.init(code: $0.code, flagImageUri: request, wikiDataId: $0.wikiDataId, name: $0.name)
         })
-        view?.updateCountryDetail(items!)
-        
+        view?.updateCountryDetail(items!)        
     }
 }
